@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4078105196816446830}
   - component: {fileID: 6342642033211011662}
-  - component: {fileID: 5781626459479545103}
   - component: {fileID: 5963476138549935898}
+  - component: {fileID: 2223459549261991299}
   m_Layer: 0
   m_Name: AnxiousNPC
   m_TagString: Untagged
@@ -33,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 8216275684744926796}
   - {fileID: 1485950338807296247}
+  - {fileID: 2067329580855301118}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,7 +89,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5781626459479545103
+--- !u!114 &5963476138549935898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022681551155180577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0779ab32129543549836b57a6cef01fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBubble: {fileID: 3831801694465089271}
+--- !u!58 &2223459549261991299
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,19 +117,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
---- !u!114 &5963476138549935898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022681551155180577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0779ab32129543549836b57a6cef01fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 1.5
 --- !u!1 &3769028161933954798
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +247,7 @@ RectTransform:
   m_GameObject: {fileID: 4238009002465279267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6234233, y: 2.6234233, z: 2.6234233}
+  m_LocalScale: {x: 2.6234236, y: 2.6234236, z: 2.6234236}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8216275684744926796}
@@ -253,7 +255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: -128}
+  m_AnchoredPosition: {x: -179.99995, y: -128.00017}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4830668483659196035
@@ -293,8 +295,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278215930
+  m_fontColor: {r: 0.9803922, g: 0.3921569, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -311,8 +313,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -368,6 +370,67 @@ MonoBehaviour:
   textAssetBarks: {fileID: 4900000, guid: 2806df7c438c42568ee9299ffc35f9a4, type: 3}
   barks: []
   textToBark: []
+--- !u!1 &6650326393174762914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067329580855301118}
+  - component: {fileID: 9074233959373973151}
+  - component: {fileID: 8423649653752900539}
+  m_Layer: 0
+  m_Name: CollisionArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067329580855301118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650326393174762914}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4078105196816446830}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &9074233959373973151
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650326393174762914}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!114 &8423649653752900539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650326393174762914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21919f7b9b466d46822be026b162419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7821287190628381230
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +716,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

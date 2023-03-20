@@ -26,11 +26,11 @@ public class TXTReader : MonoBehaviour
         
     }
 
-    void CallTextFromTXTFile()
+    public void CallTextFromTXTFile()
     {
         barks = textAssetBarks.text.Split(new string[] { "\n" }, StringSplitOptions.None);
     }
-    void ApplyBarkstoTextBubble()
+    public void ApplyBarkstoTextBubble()
     {
         for (int i = 0; i < textToBark.Length; i++)
         {
@@ -38,7 +38,7 @@ public class TXTReader : MonoBehaviour
         }
     }
 
-    void ShuffleBarks()
+    public void ShuffleBarks()
     {
         for (int i = 0; i < 11; i++)
         {
