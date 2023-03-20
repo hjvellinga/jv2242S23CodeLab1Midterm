@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.IO; 
 
 public class ASCIILevelLoaderScript : MonoBehaviour
@@ -29,6 +30,8 @@ public class ASCIILevelLoaderScript : MonoBehaviour
     //put the gameObjects that will feature in the levels here 
 
     public GameObject playerCharacter;
+    //original position player 
+    public Vector2 originalPosPlayer;
 
     public GameObject goal;
 
@@ -52,11 +55,11 @@ public class ASCIILevelLoaderScript : MonoBehaviour
     void Start()
     {
         FILE_PATH = Application.dataPath + FILE_DIR + FILE_NAME; //once scene is loaded look here for info Unity! 
-        LoadLevel(); 
-
+        LoadLevel();
+        originalPosPlayer = playerCharacter.transform.position;
     }
 
-    bool LoadLevel()  //this is gonna be where we read information from the text documents 
+    public bool LoadLevel()  //this is gonna be where we read information from the text documents 
     {   
         //if there's a level already, destroy it
         Destroy(level);
@@ -119,8 +122,18 @@ public class ASCIILevelLoaderScript : MonoBehaviour
         CurrentLevel++; 
     }
 
-    public void HitNPC()
+    //public void HitAvoidant()
+    // {
+    //    Debug.Log("HitAvoidant method is running"); 
+    //}
+
+    //public void HitAnxious()
+    //{
+    //    Debug.Log("HitAnxious method is running");
+    //}
+
+    public void ResetPlayer()
     {
-        Debug.Log("ya hit someone");
+        playerCharacter.transform.position = originalPosPlayer; 
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AnxiousScript : MonoBehaviour
@@ -13,7 +14,9 @@ public class AnxiousScript : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D col)
     {
-        GameManager.instance.GetComponent<ASCIILevelLoaderScript>().HitNPC();
+    //   GameManager.instance.GetComponent<ASCIILevelLoaderScript>().HitNPC();
         Debug.Log("this one's anxiously attached and will close in on you and give damage when it touches you");
+        GameManager.instance.GetComponent<ASCIILevelLoaderScript>().LoadLevel();
+        
     }
 }
