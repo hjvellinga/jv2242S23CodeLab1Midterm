@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6342642033211011662}
   - component: {fileID: 5963476138549935898}
   - component: {fileID: 2223459549261991299}
+  - component: {fileID: -5513876341280744473}
   m_Layer: 0
   m_Name: AnxiousNPC
   m_TagString: Untagged
@@ -118,6 +119,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &-5513876341280744473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022681551155180577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d874a7408ac313d43873a3215174f42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  forceAmount: 5
+  playerCharacterObject: {fileID: 5358647946091677130, guid: fa8866b061f4112478e9ae5656c6326a, type: 3}
+  minDistance: 3
+  range: 0
 --- !u!1 &3769028161933954798
 GameObject:
   m_ObjectHideFlags: 0

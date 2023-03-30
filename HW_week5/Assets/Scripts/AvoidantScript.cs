@@ -41,17 +41,8 @@ public class AvoidantScript : MonoBehaviour
             //turn strings into array
             string[] fileSplit = fileContents.Split('\n'); //split into lines
             Debug.Log(fileSplit.Length);
-            // for (int i = 1; i < fileSplit.Length - 1; i++)
-           // {
-           //     avoidantText.Add(fileSplit[i]);
-           // }
-
-            //display the text on the screen
             textBubble.text = fileSplit[Random.Range(0,fileSplit.Length)];
         }
-        //textBubble.GetComponent<TXTReader>().CallTextFromTXTFile(); //call all the functions in the TXT Script because apparently you can't call a whole script
-        //textBubble.GetComponent<TXTReader>().ApplyBarkstoTextBubble(); 
-        //textBubble.GetComponent<TXTReader>().ShuffleBarks();
         }
     }
 
